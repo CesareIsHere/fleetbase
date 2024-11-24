@@ -34,8 +34,10 @@ Fleetbase is a modular logistics and supply chain operating system designed to s
 git clone git@github.com:fleetbase/fleetbase.git  
 cd fleetbase  
 docker-compose up -d  
-docker exec -ti fleetbase-application-1 bash  
-sh deploy.sh
+docker exec -ti fleetbase-application-1 bash
+nano deploy.sh   --> Change header to #!/bin/bash
+sed -i 's/\r$//' deploy.sh
+bash deploy.sh
 ```
 
 ## 📖 Table of contents
